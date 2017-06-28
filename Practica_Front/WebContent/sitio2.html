@@ -1,0 +1,21 @@
+<div ng-controller="sitio2Ctl">
+
+	<table width="100" border="1" class="table table-hover">
+		<tr ng-repeat="elemento in lista" ng-click="mostrarDetalle(elemento)">
+			<th>{{elemento.clave1}}</th>
+			<th>{{elemento.clave2}}</th>
+			<th>{{elemento.clave3 | date:"dd/MM/yyyy HH:mm:ss"}}</th>
+		</tr>
+		
+	</table>
+	<div class="row">
+		<div class="panel panel-default">
+	      <div class="panel-heading">{{cuerpo.title | uppercase}}</div>
+	      <div class="panel-body">{{cuerpo.body}} <button type="button" class="btn btn-warning "><span class="glyphicon glyphicon-fire"></span>Boton</button></div>
+	    </div>
+	</div>
+
+	<div ng-include="'modal1.html'"></div>
+	
+</div>
+
